@@ -86,8 +86,8 @@ if __name__ == '__main__':
     val_df,_ = get_df(args.valCsvPath)
     transform_train, transform_val = get_transform(image_size=112)
     
-    trainset = ScenesDataset(train_df, transforms=transform_train)
-    valset = ScenesDataset(val_df, transforms=transform_val)
+    trainset = ScenesDataset(train_df, transforms=transform_train, mode='train')
+    valset = ScenesDataset(val_df, transforms=transform_val, mode='val')
     
     train_loader = DataLoader(train_df,batch_size =32, shuffle=True, num_workers=2)
     val_loader = DataLoader(val_df, batch_szie =32, shuffle=False, num_workers=2)
