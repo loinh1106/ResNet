@@ -95,7 +95,7 @@ if __name__ == '__main__':
     
     model = get_model().to(device)
     loss_func = nn.CrossEntropyLoss()
-    optimizer = AdamW(model.parameters, lr= 0.001, weight_decay= 5e-4)
+    optimizer = AdamW(model.parameters(), lr= 0.001, weight_decay= 5e-4)
 
     for epoch in range (args.epoch):
         train_epoch(epoch, model, train_loader, loss_func, optimizer, device=device)
