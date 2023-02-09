@@ -33,7 +33,7 @@ def prepare_df(lst_data, out_path, id_encode):
 
 if __name__ == '__main__':
     args = parse_args()
-    lst_class = glob.glob(f'{args.train_path}/*')
+    lst_class = glob(f'{args.train_path}/*')
     lst_class_val = glob.glob(f'{args.val_path}/*')
     lst_class.sort()
     lst_class_val.sort()
