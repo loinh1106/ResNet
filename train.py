@@ -89,8 +89,8 @@ if __name__ == '__main__':
     trainset = ScenesDataset(train_df, transforms=transform_train, mode='train')
     valset = ScenesDataset(val_df, transforms=transform_val, mode='val')
     
-    train_loader = DataLoader(train_df,batch_size =32, shuffle=True, num_workers=2)
-    val_loader = DataLoader(val_df, batch_size =32, shuffle=False, num_workers=2)
+    train_loader = DataLoader(trainset,batch_size =32, shuffle=True, num_workers=2)
+    val_loader = DataLoader(valset, batch_size =32, shuffle=False, num_workers=2)
     
     
     model = get_model().to(device)
