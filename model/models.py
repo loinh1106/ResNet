@@ -85,7 +85,7 @@ class ResNet(nn.Module):
 
     def _make_layers(self, block, planes, blocks, stride=1):
         downsample = None
-        if self.stride !=1 or self.inplanes != planes* block.expansion:
+        if stride !=1 or self.inplanes != planes* block.expansion:
             downsample = nn.Sequential(
                 nn.Conv2d(self.inplanes, planes * block.expansion,
                           kernel_size=1, stride=stride, bias=False),
