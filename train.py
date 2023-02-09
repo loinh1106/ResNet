@@ -25,7 +25,7 @@ def parse_args():
   parser.add_argument('--model_name', type=str, required=True, default='resnet34')
   parser.add_argument('--trainCsvPath', type=str, required=True)
   parser.add_argument('--valCsvPath', type=str, required=True)
-  parser.add_argument('--epoch', type=str, required=True, default=2)
+  parser.add_argument('--epoch', type=int, required=True, default=2)
 
 
   args, _ = parser.parse_known_args()
