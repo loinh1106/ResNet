@@ -84,7 +84,7 @@ if __name__ == '__main__':
 
     train_df,out_dim = get_df(args.trainCsvPath)
     val_df,_ = get_df(args.valCsvPath)
-    transform_train, transform_val = get_transform(image_size=112)
+    transform_train, transform_val = get_transform(image_size=224)
     
     trainset = ScenesDataset(train_df, transforms=transform_train, mode='train')
     valset = ScenesDataset(val_df, transforms=transform_val, mode='val')
